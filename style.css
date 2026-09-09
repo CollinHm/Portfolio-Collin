@@ -428,7 +428,6 @@ img {
   padding: 24px 36px;
 }
 .fdf-navbar__nav .active {
-  /* Dit werkt als een border-bottom van 3px, maar schaalt beter mee */
   border-bottom: 3px solid #fae486;
   font-weight: bold;
 }
@@ -437,16 +436,15 @@ img {
   display: inline-flex;
   align-items: center;
   padding: 18px 24px;
-  color: white;
   text-decoration: none;
   border-radius: 10px;
-  width: 32%;
+  width: fit-content;
   color: black;
 }
 .fdf-btn::after {
   content: "\f138";
   font-family: "bootstrap-icons";
-  padding-left: 18px;
+  padding-left: 12px;
 }
 .fdf-btn__yellow {
   background-color: #fae486;
