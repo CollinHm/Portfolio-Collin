@@ -134,6 +134,64 @@ img {
   }
 }
 
+.fdf-navbar {
+  position: fixed;
+  z-index: 99;
+  width: 30%;
+  left: 50%;
+  top: 2%;
+  transform: translateX(-50%);
+  background-color: $red;
+  border-radius: 12px;
+  box-shadow: 0 2px 9px black;
+
+  @media(max-width: $breakpoint-xl) {
+    width: 80%;
+  }
+  @media(max-width: $breakpoint-md) {
+    width: 90%;
+  }
+  @media(max-width: $breakpoint-md) {
+    width: 100%;
+  }
+
+  a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), z-index 0s;
+    /* Establish a stacking context for z-index to work */
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      /* scale(1.15) makes it 15% bigger, translateY moves it slightly forward/up */
+      transform: scale(1.15) translateY(-2px);
+      z-index: 10;
+    }
+  }
+
+  &__nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 24px 36px;
+
+    @media(max-width: $breakpoint-sm) {
+     justify-content: center;
+      a{
+        padding: 0 6px;
+      }
+    }
+
+    .active {
+      border-bottom: 3px solid $yellow;
+      font-weight: bold;
+    }
+  }
+}
+
 .fdf-hero {
   position: relative;
   width: 100%;
@@ -449,46 +507,7 @@ img {
   }
 }
 
-.fdf-navbar {
-  position: fixed;
-  z-index: 99;
-  width: 30%;
-  left: 50%;
-  top: 2%;
-  transform: translateX(-50%);
-  background-color: $red;
-  border-radius: 12px;
-  box-shadow: 0 2px 9px black;
 
-  a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), z-index 0s;
-    /* Establish a stacking context for z-index to work */
-    position: relative;
-    z-index: 1;
-
-    &:hover {
-      /* scale(1.15) makes it 15% bigger, translateY moves it slightly forward/up */
-      transform: scale(1.15) translateY(-2px);
-      z-index: 10;
-    }
-  }
-
-  &__nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 24px 36px;
-
-    .active {
-      border-bottom: 3px solid $yellow;
-      font-weight: bold;
-    }
-  }
-}
 
 .fdf-btn {
   display: inline-flex;
@@ -536,20 +555,12 @@ img {
   &__slide {
     width: 100%;
     overflow: hidden;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
+    //display: flex !important;
+    //flex-direction: row !important;
+    //justify-content: center !important;
     margin-top: 7%;
 
     &__image {
-
-      img {
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 24px;
-      }
-
       position: relative;
       overflow: hidden;
       display: block;
@@ -564,11 +575,12 @@ img {
         object-fit: cover;
         object-position: center;
         position: absolute;
+          border-radius: 12px;
       }
     }
 
     &__content {
-      width: 70%;
+      width: 80%;
       margin: 0;
       padding: 12px 0 0 24px;
 
