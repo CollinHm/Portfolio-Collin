@@ -13,33 +13,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="fdf-navbar">
+
+<div class="menu-icon"></div>
+<nav class="fdf-navbar bg--red">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-1"></div>
+            <div class="col-10">
                 <ul class="fdf-navbar__nav">
                     <li><a href="index.html">Home</a></li>
                     <li class="active"><a href="#">My time as Developer</a></li>
                     <li><a href="projects.html">Projects</a></li>
                 </ul>
             </div>
+            <div class="col-1"></div>
         </div>
     </div>
 </nav>
+
 <section class="fdf-aboutme fdf-p">
     <div class="container">
         <div class="row">
-            <div class="col-md-5">
-                <div class="fdf-aboutme__image-wrapper">
+            <div class="col-md-5 order-2">
+                <div class="fdf-aboutme__image-wrapper right">
                     <div class="fdf-aboutme__image-wrapper__image">
                         <img src="img/me/Collin9.jpg">
                     </div>
                 </div>
             </div>
-            <div class="col-md-7">
-                <div class="fdf-aboutme__content-wrapper">
-                    <div class="fdf-aboutme__content-wrapper__content">
-                        <h1>My time as a developer</h1>
+            <div class="col-md-7 order-1">
+                <div class="fdf-aboutme__content-wrapper right">
+                    <div id="aboutmecollapse" class="fdf-aboutme__content-wrapper__content">
+                        <h1>My time as developer</h1>
                     <p>In 2023, I started my studies at SintLucas in Eindhoven, where I was introduced to development for the first time.
                         <br><br>
                         At first, I was introduced to basic HTML and CSS, and I used them to create my very first "website."
@@ -107,5 +112,14 @@
         </div>
     </div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="main.js"></script>
 </body>
 </html>

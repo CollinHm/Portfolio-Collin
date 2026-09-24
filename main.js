@@ -20,5 +20,33 @@ $(document).ready(function () {
           <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
       </button>`,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    centerMode: false,
+                    centerPadding: '0',
+                }
+            }
+        ]
     });
+
+    $('.menu-icon').on('click', function () {
+        $('.fdf-navbar').toggleClass('active');
+    });
+
+    function checkScreenSize() {
+        if ($(window).width() <= 320) {
+            $('.fdf-navbar__nav li:nth-child(2) a').text('My time..');
+        } else {
+            $('.fdf-navbar__nav li:nth-child(2) a').text('My time as Developer');
+        }
+    }
+
+    checkScreenSize();
+
+    $(window).on('resize', function () {
+        checkScreenSize();
+    });
+
 });
